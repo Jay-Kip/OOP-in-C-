@@ -2,7 +2,11 @@
 using std::string;
 
 
-class Employee {
+class abEmp {
+	virtual void prom()=0;
+};
+
+class Employee: public abEmp {
 	private:
 		string Name;
 		string Company;
@@ -41,36 +45,33 @@ class Employee {
 			std::cout<<"Age - "  << Age << std::endl;
 		};
 
+		void prom() {
+			if (Age > 30)
+				std::cout << Name << " Got promoted." << std::endl;
+			else
+				std::cout << Name << " No promotion for you. " << std::endl;
+		};
+
 	public:
-		Employee(string name, string company, int age) {
+		Employee (string name, string company, int age) {
 			Name = name;
 			Company = company;
 			Age = age;
-
 		}
-
-
+		
 };
 
 
 int main()
 {
 	Employee emp_1 = Employee("Jay", "Microsoft", 22);
-	emp_1.intro();
+	emp_1.prom();
 
-	emp_1.setAge(5);
-	std::cout<< emp_1.getName() << " is " <<emp_1.getAge()<< " years old" <<std::endl;
+
 	std::cout << "------------" << std::endl;
-	
 
-//	std::cout << "Employee 1: " << emp_1.Name << std::endl;
-
-	Employee emp_2 = Employee("Mike", "Samsung" , 24);
-	emp_2.intro();
-
-	emp_2.setName("Naomy");
-	emp_2.setCompany("Azure");
-	std::cout << emp_2.getName() << " works for  " << emp_2.getCompany() << std::endl;
+	Employee emp_2 = Employee("Mike", "Samsung",  33);
+	emp_2.prom();
 
 
 	return (0);
