@@ -16,3 +16,10 @@ Constructor - Special function that is automatically called when an object of th
 (i) Doesn't have return type
 (ii) Has same name as the class it belongs to
 (iii) Must be public
+
+
+Encapsulation -> Process of binding together data and methods that operate the data.
+-> Used to prevent unwanted parties from interacting with the data directly
+
+
+Abstraction -> Hiding complex things behind a procedure that makes those things simple.
