@@ -67,13 +67,11 @@ class dev : Employee {
 
 		dev (string name, string company, int age, string lang) : Employee(name, company, age)
 		{
-			lang = lang;
+			this->lang = lang; // the arrow operator is used to to assign the lang variable
 		};
 
 		void bug() {
-			std::cout << lang << std::endl;
 			std::cout << getName() << " fixed a bug using " << lang << std::endl;
-
 
 		};
 
